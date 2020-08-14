@@ -1,0 +1,68 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Herbolaria Joselyn</title>
+    <link rel="stylesheet" type="text/css" href="estilos/nuevoUsuario.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+</head>
+
+<body class="hidden">
+    <header>
+        <nav id="nav" class="nav1">
+            <div class="contenedor-nav">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="enlaces" id="enlaces">
+                    <a href="bienvenida.jsp"  class="btn-header">Cuenta</a>
+                    <a href="listadoDeUsuarios.jsp"  class="btn-header">Usuarios</a>
+                    <a href="nuevoUsuario.jsp"  class="btn-header">Registrar</a>
+                    <a href="logueo.jsp"  class="btn-header">Salir</a>
+                </div>
+                <div class="icono" id="open">
+                    <span>&#9776;</span> <!--para el responsiv-->
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="team contenedor" id="Registrar">
+            <div class="container">
+                <div class="registrar-container">
+                    <div class="registrar">
+                        <h2>REGISTRAR</h2>
+                        <form  method="post" action="usuario.do"  >
+                        	<input  type="hidden" name="operacion" value="registra"  >
+                            <label>Nombre y Apellido:<input class="box"  type="text" name="nombre" maxlength="50" style="color:#000000" required></label>
+                            <label>Correo:<input class="box" type="email" name="correo" maxlength="50" style="color:#000000" required></label>
+                    
+                            <label>Pais</label>
+                            <select class="box" name="pais" style="color:#000000">
+                                <option value="01">Perú</option>
+                                <option value="02">Colombia</option>
+                                <option value="03">Brasil</option>
+                                <option value="04">Chile</option>
+                            </select>
+
+                            <label>Telefono:<input class="box" type="text" name="telefono" maxlength="50" style="color:#000000" required></label>
+                            <label>Fecha de Nacimiento:<input class="box"  type="text" name="fecnac" maxlength="50" placeholder="dd/mm/aa" style="color:#000000"required></label>
+                            <label>Usuario:<input class="box" type="text" name="usuario" maxlength="50" style="color:#000000" required></label>
+                            <label>Contraseña:<input class="box" type="password" name="clave" maxlength="50" style="color:#000000" required></label>
+                 
+                            <input type="submit" class="submit" value="Registrar">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/filtro.js"></script>
+</body>
+</html>
