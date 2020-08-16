@@ -12,7 +12,11 @@
 </head>
 
 <body class="hidden">
-    <header>
+    <header style="background-image: linear-gradient(to bottom,
+    								 rgba(204, 204, 203, 0.6),
+    								 rgba(29,241,171, 0.6),
+    								 rgba(7,109,150, 0.45)
+  									 ),url('img/fondo.jpg');">
         <nav id="nav" class="nav1">
             <div class="contenedor-nav">
                 <div class="logo">
@@ -36,10 +40,16 @@
                 <div class="registrar-container">
                     <div class="registrar">
                         <h2>MODIFICAR</h2>
-                        	<form  method="post" action="usuario.do"  >
+                        	<form  method="post" action="usuario.do" onsubmit="return validar()" >
 						        <input  type="hidden" name="operacion" value="modifica">
-						              <label>Nombre y Apellido:<input class="box"  type="text" name="nombre" maxlength="50" style="color:#000000" value="${requestScope.b_usuario.nombre}" required></label>
-						              <label>Correo:<input class="box" type="text" name="correo" maxlength="50" style="color:#000000" value="${requestScope.b_usuario.correo}" required></label>
+						              <label>Nombre y Apellido:<input class="box"  type="text" 
+						              							name="nombre" maxlength="50" 
+						              							style="color:#000000" 
+						              							value="${requestScope.b_usuario.nombre}" required></label>
+						              <label>Correo:<input class="box" type="text"
+						              				 name="correo" maxlength="50" 
+						              				 style="color:#000000" 
+						              				 value="${requestScope.b_usuario.correo}" required></label>
 						                    
 						              <label>Pais</label>
 						              <select class="box" name="pais" style="color:#000000">
@@ -49,10 +59,19 @@
 						                   <option value="4">Chile</option>
 						              </select>
 						
-						              <label>Telefono:<input class="box" type="text" name="telefono" maxlength="50" style="color:#000000" value="${requestScope.b_usuario.telefono}" required></label>
-						              <label>Fecha de Nacimiento:<input class="box"  type="text" name="fecnac"  maxlength="50" placeholder="dd/mm/aa" style="color:#000000" required></label>
-						              <label>Usuario:<input class="box" type="text" name="usuario"  maxlength="50" style="color:#000000" value="${requestScope.b_usuario.usuario}" required></label>
-						              <label>Contraseña:<input class="box" type="password" name="clave"  maxlength="50" style="color:#000000" value="${requestScope.b_usuario.clave}" required></label>
+						              <label>Telefono:<input class="box" type="text" name="telefono"
+						              						 maxlength="50" style="color:#000000" 
+						              						 value="${requestScope.b_usuario.telefono}" required></label>
+						              <label>Fecha de Nacimiento:<input class="box"  type="date" name="fecnac" 
+						              							 maxlength="50" placeholder="dd/mm/aa" 
+						              							 style="color:#000000" 
+						              							 value="${requestScope.b_usuario.fecnac}" required></label>
+						              <label>Usuario:<input class="box" type="text" name="usuario" 
+						              				 maxlength="50" style="color:#000000" 
+						              				 value="${requestScope.b_usuario.usuario}" required></label>
+						              <label>Contraseña:<input class="box" type="password" name="clave" 
+						              					 maxlength="50" style="color:#000000" 
+						              					 value="${requestScope.b_usuario.clave}" required></label>
 						                 
 						              <input type="submit" class="submit" value="Modificar">
     						</form>
@@ -61,8 +80,9 @@
             </div>
         </section>
         
-    <script src="js/jquery.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/filtro.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/jquery.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/main.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/filtro.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/validar.js"></script>
 </body>
 </html>

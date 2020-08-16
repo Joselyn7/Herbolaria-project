@@ -100,11 +100,13 @@ img{
 header{
   width: 100%;
   height:600px;
+  /*
   background-image: linear-gradient(to bottom,
   rgba(204, 204, 203, 0.6),
-  rgba(29,241,171, .6),
-  rgba(7,109,150, .45)
+  rgba(29,241,171, 0.6),
+  rgba(7,109,150, 0.45)
   ), url(img/fondo.jpg);
+  */
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -303,9 +305,6 @@ nav .enlaces a:hover{
 }
 
 /* Footer */
-
-footer{background-image:url(img/fondo.jpg);}
-
 .marca-logo{
   width: 40%;
   margin: auto;

@@ -14,7 +14,11 @@
         crossorigin="anonymous">
 </head>
 <body>
-    <header>
+    <header style="background-image: linear-gradient(to bottom,
+    								 rgba(204, 204, 203, 0.6),
+    								 rgba(29,241,171, 0.6),
+    								 rgba(7,109,150, 0.45)
+  									 ),url('img/fondo.jpg');">
         <nav id="nav" class="nav1">
             <div class="contenedor-nav">
                 <div class="logo">
@@ -139,7 +143,7 @@
             </div>
         </section>
     </main>
-    <footer id="contacto">
+    <footer id="contacto" style="background-image: url('img/fondo.jpg');">
         <div class="footer contenedor">
             <div class="marca-logo">
                 <img src="img/logo.png" alt="">
